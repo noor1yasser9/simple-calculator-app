@@ -1,0 +1,1 @@
+padding-top: max(var(--space-xl), env(safe-area-inset-top, 0px));
