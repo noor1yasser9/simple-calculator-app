@@ -1,12 +1,6 @@
-// src/hooks/useCalculator.ts
-const handleKeyDown = useCallback((e: KeyboardEvent) => {
-  // ...
-  switch (key) {
-    case 'Enter':
-    case '=':          // ⌨️ Enter أو = → تنفيذ الحساب
-      e.preventDefault();
-      calculate();
-      break;
-    // ...
-  }
-}, [inputDigit, inputDecimal, selectOperator, calculate, deleteLast, clear, applyPercent]);
+// src/components/calculator/Calculator.tsx — Row 5: Bottom
+[
+  { label: '0',  variant: 'digit',  wide: true, action: () => calc.inputDigit('0') },
+  { label: '.',  variant: 'digit',              action: calc.inputDecimal },
+  { label: '=',  variant: 'equals',             action: calc.calculate }, // ✅ الزر المطلوب
+],
