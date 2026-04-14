@@ -1,8 +1,6 @@
-// قبل (خطأ UX)
-const showAllClear = displayValue === '0' || hasError || waitingForOperand;
-//                                                       ↑ يُظهر "AC" لكن "C" أفيد هنا
+// إضافة variant جديد كان مستخدماً في Calculator.tsx لكن غير معرَّف
+export type CalcButtonVariant =
+  | 'digit' | 'operator' | 'action' | 'equals' | 'active'
+  | 'error-clear'; // ← أُضيف: زر أحمر يظهر عند الخطأ
 
-// بعد (صحيح)
-const showAllClear = displayValue === '0' && !waitingForOperand && !hasError;
-//                                           ↑ عند وجود عملية معلّقة → يُظهر "C"
-//                                           لأن clearEntry تُلغيها وتُعيد القيمة السابقة
+'error-clear': 'bg-semantic-danger/20 text-semantic-danger ...'
